@@ -9,8 +9,7 @@
       l = "ll";
       la = "ls -A --color=auto";
       lla = "ls -lA --color=auto";
-      nix-update =
-        "nix flake update ~/.config/home-manager/ && home-manager switch";
+      nix-update = "nix flake update ~/Projects/Nix-Server/";
     };
   };
 }
