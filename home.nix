@@ -26,6 +26,7 @@
     nixfmt
     luajitPackages.luacheck
     stylua
+    lazygit
   ];
 
   programs.direnv = {
