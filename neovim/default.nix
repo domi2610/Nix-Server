@@ -30,7 +30,7 @@ in {
                               gitsigns = true,
                               nvimtree = false,
                               telescope = true,
-                              fidget = false,
+                              fidget = true,
                               treesitter = true,
                               illuminate = true,
                               lsp_saga = true,
@@ -64,6 +64,9 @@ in {
         type = "lua";
         config = ''
           require('nvim-treesitter.configs').setup {
+              autotag = {
+                  enable = true,
+              },
               highlight = {
                   enable = true,
                   additional_vim_regex_highlighting = false,
@@ -97,7 +100,14 @@ in {
       {
         plugin = nvim-autopairs;
         type = "lua";
-        config = "require('nvim-autopairs').setup()";
+        config = "require('nvim-autopairs').setup {}";
+      }
+      {
+        plugin = nvim-ts-autotag;
+        type = "lua";
+        config = ''
+          require('nvim-ts-autotag').setup()
+        '';
       }
       nvim-surround
       vim-illuminate
@@ -169,6 +179,14 @@ in {
       }
       vim-tmux-navigator
       vim-tmux-clipboard
+      lazygit-nvim
+      {
+        plugin = fidget-nvim;
+        type = "lua";
+        config = ''
+          require('fidget').setup()
+        '';
+      }
     ];
   };
 }

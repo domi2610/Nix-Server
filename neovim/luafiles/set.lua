@@ -1,3 +1,5 @@
+-- luacheck: globals vim
+
 local o = vim.opt
 
 -- disable netrw for NvimTree

@@ -1,3 +1,5 @@
+-- luacheck: globals vim
+
 local lspconfig = require("lspconfig")
 local typescript = require("typescript")
 
@@ -76,11 +78,6 @@ lspconfig.cssls.setup({
 })
 
 lspconfig.html.setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
-
-lspconfig.bashls.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })

@@ -1,3 +1,5 @@
+-- luacheck: globals vim
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -55,3 +57,6 @@ vim.keymap.set("n", "<leader>fc", builtin.grep_string, {})
 
 -- copilot
 vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("")', { silent = true, expr = true })
+
+-- lazygit
+vim.keymap.set("n", "<leader>gl", ":LazyGit<CR>")
