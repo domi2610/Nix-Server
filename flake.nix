@@ -18,7 +18,7 @@
 	pkgs2 = nixpkgs.legacyPackages.${system2};
     in {
       homeConfigurations."ubuntu" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+        inherit pkgs1;
 
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
