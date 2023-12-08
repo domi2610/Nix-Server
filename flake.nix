@@ -13,7 +13,7 @@
   outputs = { nixpkgs, home-manager, ... }:
     let
       system1 = "aarch64-linux";
-	system2 = "x84_64-linux";
+	system2 = "x86_64-linux";
       pkgs1 = nixpkgs.legacyPackages.${system1};
 	pkgs2 = nixpkgs.legacyPackages.${system2};
     in {
