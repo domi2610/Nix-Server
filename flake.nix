@@ -12,11 +12,23 @@
 
   outputs = { nixpkgs, home-manager, ... }:
     let
-      system = "aarch64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      system1 = "aarch64-linux";
+	system2 = "x84_64-linux";
+      pkgs1 = nixpkgs.legacyPackages.${system1};
+	pkgs2 = nixpkgs.legacyPackages.${system2};
     in {
       homeConfigurations."ubuntu" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+
+        # Specify your home configuration modules here, for example,
+        # the path to your home.nix.
+        modules = [ ./home.nix ];
+
+        # Optionally use extraSpecialArgs
+        # to pass through arguments to home.nix
+      };
+	homeConfigurations."wsl" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs2;
 
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
