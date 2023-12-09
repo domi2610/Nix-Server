@@ -9,7 +9,7 @@
       l = "ll";
       la = "ls -A --color=auto";
       lla = "ls -lA --color=auto";
-      nix-update = "nix flake update ~/Projects/Nix-Server/.";
+      nix-update = "nix flake update --flake ~/Projects/Nix-Server/.";
     };
   };
 }
