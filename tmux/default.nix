@@ -7,7 +7,7 @@
     mouse = true;
     escapeTime = 10;
     shell = "${pkgs.zsh}/bin/zsh";
-    terminal = "screen-256color";
+    terminal = "screen-256color:RGB";
     extraConfig = ''
       set -g prefix C-a
       unbind C-b
